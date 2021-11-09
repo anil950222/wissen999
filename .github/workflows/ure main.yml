@@ -19,5 +19,6 @@ jobs:
     - name: ARM deployement
       uses:azure/CLI@v1
       with:
-            inlinescript: |
-             az deployment group create --resource-group anil3333 --name storageAccountDeployement --template-file template.json parameter storagetype Standard_LRS
+            resourceGroupName: anil3333
+            template: ./template.json
+            parameters: ./parameters.json
