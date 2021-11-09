@@ -13,11 +13,10 @@ jobs:
      with:
         creds: ${{ secrets.anilsc }}
     
-   - name: checkout source code
-     uses: actions/checkout@v1
+   
       
    - name: ARM deployement
-     uses: azure/CLI@v1
+     uses: azure/arm-deploy@v1
      with:
             resourceGroupName: anil3333
             template: ./template.json
