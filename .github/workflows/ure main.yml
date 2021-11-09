@@ -1,6 +1,6 @@
 on: [push]
 
- name: AzureARMDeploy
+name: AzureARMDeploy
 
 jobs:
   
@@ -13,12 +13,12 @@ jobs:
      with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
-    - name: checkout source code
-      uses: actions/checkout@v1
+   - name: checkout source code
+     uses: actions/checkout@v1
       
-    - name: ARM deployement
-      uses:azure/CLI@v1
-      with:
+   - name: ARM deployement
+     uses: azure/CLI@v1
+     with:
             resourceGroupName: anil3333
             template: ./template.json
             parameters: ./parameters.json
