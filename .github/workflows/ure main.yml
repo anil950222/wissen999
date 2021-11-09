@@ -21,4 +21,4 @@ jobs:
      with:
             resourceGroupName: anil3333
             template: ./template.json
-            parameters: ./parameters.json
+            
